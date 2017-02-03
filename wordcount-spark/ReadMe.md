@@ -1,3 +1,5 @@
+# Ref. : http://spark.apache.org/docs/latest/submitting-applications.html
+
 # Submitting Spark Job through windows command line
 # Note :
 #-------
@@ -6,6 +8,7 @@
 
 spark-submit --class <complete job classname with package name> <jar file> <param-1> .. 
 
-ex :
-----
-spark-submit --class org.nodisk.wordcount.WordCount wordcount-spark-0.0.1-SNAPSHOT.jar debug.log
+#ex (Running in Local thread):
+#-----------------------------
+spark-submit --master local --class org.nodisk.wordcount.WordCount wordcount-spark-0.0.1-SNAPSHOT.jar debug.log
+
